@@ -13,6 +13,7 @@ class NoteForm extends Component {
       noteList: {}
     };
   }
+  
   componentDidMount() {
     //attach event listener to firebase
     dbRef.on("value", snapshot => {
@@ -39,11 +40,6 @@ class NoteForm extends Component {
       noteContent: this.state.noteContent,
     };
 
-    // if there are more than 6 notes, remove the first note
-    // if ((Object.keys(this.state.noteList).length) > 5){
-    //   dbRef.remove();
-    // }
-
     // clear the form
     dbRef.push(newNote);
 
@@ -52,6 +48,7 @@ class NoteForm extends Component {
     })
   }
 
+  // removes all the notes from noteList
   removeAll = () =>{
     dbRef.remove();
   }
@@ -68,7 +65,6 @@ class NoteForm extends Component {
 
           <input
             required
-            // maxlength="60"
             onChange={this.handleChange}
             type='text'
             id="noteContent"
