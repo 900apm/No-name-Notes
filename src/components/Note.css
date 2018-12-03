@@ -26,9 +26,10 @@ p{
   color: grey;
   padding: 0 10%;
   word-break: break-all;
+  font-size: 16px;
 }
 
-button{
+.remove{
   color: whitesmoke;
   background-color: darkgrey;
   position: absolute;
@@ -40,7 +41,7 @@ button{
   padding: 5px;
 }
 
-button:active{
+.remove:active{
   border-bottom: 3px solid grey;
 }
 

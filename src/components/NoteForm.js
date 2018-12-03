@@ -39,13 +39,21 @@ class NoteForm extends Component {
       noteContent: this.state.noteContent,
     };
 
-    console.log(Object.keys(this.state.noteList).length)
+    // if there are more than 6 notes, remove the first note
+    // if ((Object.keys(this.state.noteList).length) > 5){
+    //   dbRef.remove();
+    // }
+
     // clear the form
     dbRef.push(newNote);
 
     this.setState({
       noteContent: "",
     })
+  }
+
+  removeAll = () =>{
+    dbRef.remove();
   }
 
   render() {
@@ -67,6 +75,8 @@ class NoteForm extends Component {
             value={this.state.noteContent} />
 
           <input type='submit' value='add note' />
+
+          <button className='removeAll' onClick={this.removeAll}>remove all</button>
 
         </form>
 

@@ -30,9 +30,12 @@ label{
   color: grey;
   text-align: center;
   margin: 5px 0;
+  font-size: 16px;
 }
 
-input[type=submit]{
+input[type=submit],
+.removeAll{
+  font-size: 16px;
   color: whitesmoke;
   background-color: darkgrey;
   border-style: none;
@@ -41,9 +44,16 @@ input[type=submit]{
   transition: color 0.1s;
 }
 
-input[type=submit]:active{
-  color: black;
+input[type=submit]:active,
+.removeAll:active{
+  color: white;
   background-color: grey;
+}
+
+.removeAll{
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
 }
 
 @media only screen and (max-width: 850px){

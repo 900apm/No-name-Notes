@@ -51,7 +51,7 @@ class Notes extends Component {
             return (
               <div key={note[0]} className='Note' >
                 <p>{note[1].noteContent}</p>
-                <button id={note[0]} onClick={this.deleteNote}>remove</button>
+                <button className='remove' id={note[0]} onClick={this.deleteNote}>remove</button>
               </div>
             )
 
