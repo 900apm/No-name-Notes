@@ -63,7 +63,7 @@ class NoteForm extends Component {
 
           <input
             required
-            maxlength="40"
+            // maxlength="60"
             onChange={this.handleChange}
             type='text'
             id="title"

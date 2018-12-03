@@ -22,7 +22,8 @@ form{
   flex-direction: column;
   justify-content: center;
   position: relative;
-  width: 30%;
+  width: 50%;
+  transition: width 0.5s;
 }
 
 label{
@@ -36,8 +37,16 @@ input[type=submit]{
   border-style: none;
   padding: 5px;
   margin: 5px 0;
+  transition: color 0.1s;
 }
 
 input[type=submit]:active{
-  
+  color: black;
+  background-color: grey;
+}
+
+@media only screen and (max-width: 850px){
+  form{
+    width: 60%;
+  }
 }

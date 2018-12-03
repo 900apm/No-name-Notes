@@ -10,7 +10,6 @@
 }
 
 .Note {
-  color: lightgrey;
   background-color: lightgrey;
   border-radius: 10px;
   margin: 20px 2%;
@@ -45,7 +44,7 @@ button:active{
   border-bottom: 3px solid grey;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 850px){
   .Notes{
     flex-direction: column;
   }
