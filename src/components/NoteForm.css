@@ -27,6 +27,7 @@ form{
 }
 
 label{
+  color: grey;
   text-align: center;
   margin: 5px 0;
 }

@@ -2,12 +2,12 @@ import firebase from 'firebase';
 
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyDjNbpS_tx3IB1dX2VrokMCUUCh9ttZhPE",
-  authDomain: "bookshelf-f0f48.firebaseapp.com",
-  databaseURL: "https://bookshelf-f0f48.firebaseio.com",
-  projectId: "bookshelf-f0f48",
-  storageBucket: "bookshelf-f0f48.appspot.com",
-  messagingSenderId: "675686978142"
+  apiKey: "AIzaSyDcxNpHPNqbeDF6-dejHmE5Gu3bWfAj9Fk",
+  authDomain: "no-name-notes.firebaseapp.com",
+  databaseURL: "https://no-name-notes.firebaseio.com",
+  projectId: "no-name-notes",
+  storageBucket: "no-name-notes.appspot.com",
+  messagingSenderId: "1018587907185"
 };
 firebase.initializeApp(config);
 
