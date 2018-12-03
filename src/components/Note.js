@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import firebase from './firebase';
+import firebase from '../firebase';
+import './Note.css';
 
 // reference to the root of the database
 const dbRef = firebase.database().ref();
@@ -48,9 +49,9 @@ class Notes extends Component {
             // }
             
             return (
-              <div key={note[0]}>
-                <h2>{note[1].title}</h2>
-                <button id={note[0]} onClick={this.deleteNote}>Delete this note</button>
+              <div key={note[0]} className='Note' >
+                <p>{note[1].title}</p>
+                <button id={note[0]} onClick={this.deleteNote}>remove</button>
               </div>
             )
 

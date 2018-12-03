@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import firebase from './firebase';
+import firebase from '../firebase';
+import './NoteForm.css'
 
 // reference to the root of the database
 const dbRef = firebase.database().ref();
@@ -54,20 +55,21 @@ class NoteForm extends Component {
     return (
       <div className="NoteForm">
 
-        <h1>notey note</h1>
+        <h1>note taker</h1>
 
         <form onSubmit={this.handleSubmit} action=''>
 
-          <label htmlFor='title'>Note Title:</label>
+          <label htmlFor='note-input'>add a note</label>
 
           <input
-
+            required
+            maxlength="40"
             onChange={this.handleChange}
             type='text'
-            id="title"
+            id="note-input"
             value={this.state.title} />
 
-          <input type='submit' value='add note' />
+          <input type='submit' value='add' />
 
         </form>
 
