@@ -6,10 +6,6 @@ import Notes from './components/Note';
 class App extends Component {
   constructor(){
     super();
-    this.state = {
-      title: "",
-      noteList: {}
-    };
   }
 
   render() {

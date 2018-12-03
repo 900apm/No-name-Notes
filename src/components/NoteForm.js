@@ -9,7 +9,7 @@ class NoteForm extends Component {
   constructor() {
     super();
     this.state = {
-      title: "",
+      noteContent: "",
       noteList: {}
     };
   }
@@ -36,18 +36,15 @@ class NoteForm extends Component {
     e.preventDefault();
     //post our new note to firebase
     const newNote = {
-      title: this.state.title,
+      noteContent: this.state.noteContent,
     };
-    // if length of noteList is >= 3
-    // remove the first element from dbRef
-    // change noteList first then push to dbRef
 
     console.log(Object.keys(this.state.noteList).length)
-    dbRef.push(newNote);
     // clear the form
+    dbRef.push(newNote);
 
     this.setState({
-      title: "",
+      noteContent: "",
     })
   }
 
@@ -59,15 +56,15 @@ class NoteForm extends Component {
 
         <form onSubmit={this.handleSubmit} action=''>
 
-          <label htmlFor='title'>write a note:</label>
+          <label htmlFor='noteContent'>write a note:</label>
 
           <input
             required
             // maxlength="60"
             onChange={this.handleChange}
             type='text'
-            id="title"
-            value={this.state.title} />
+            id="noteContent"
+            value={this.state.noteContent} />
 
           <input type='submit' value='add note' />
 

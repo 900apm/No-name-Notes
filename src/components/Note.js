@@ -9,7 +9,7 @@ class Notes extends Component {
   constructor() {
     super();
     this.state = {
-      title: "",
+      noteContent: "",
       noteList: {}
     };
   }
@@ -50,7 +50,7 @@ class Notes extends Component {
             
             return (
               <div key={note[0]} className='Note' >
-                <p>{note[1].title}</p>
+                <p>{note[1].noteContent}</p>
                 <button id={note[0]} onClick={this.deleteNote}>remove</button>
               </div>
             )

@@ -48,6 +48,6 @@ input[type=submit]:active{
 
 @media only screen and (max-width: 850px){
   form{
-    width: 60%;
+    width: 80%;
   }
 }
